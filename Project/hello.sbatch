@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH --job-name=hello-course
+#SBATCH --ntasks=2
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=256M
+#SBATCH --time=00:02:00
+#SBATCH --output=logs/hello-%j.out
+#SBATCH --error=logs/hello-%j.err
+set -euo pipefail
+cd "$SLURM_SUBMIT_DIR"
+srun ./mean
+printf 'Job %s completed its command\n' "$SLURM_JOB_ID"
