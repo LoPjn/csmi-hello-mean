@@ -1,5 +1,7 @@
 # Mon premier projet
 
+$$x=3*5$$
+
 ## compilation 
 
 ```
